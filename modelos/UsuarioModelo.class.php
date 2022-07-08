@@ -26,7 +26,7 @@ require "../utils/autoload.php";
        
 
         private function insertar(){
-            $sql = "INSERT INTO usuario (username,password,nombrecompleto) VALUES (
+            $sql = "INSERT INTO usuario (username,nombrecompleto,password,) VALUES (
                 '" . $this -> Nombre . "',
                  '" . $this -> NombreCompleto . "',
     
@@ -42,6 +42,7 @@ require "../utils/autoload.php";
         private function actualizar(){
             $sql = "UPDATE usuario SET
             username = '" . $this -> Nombre . "',
+            nombrecompleto = '" . $this -> NombreCompleto . "'
             password = '" . $this -> Password . "'
             WHERE id = " . $this -> id;
             $this -> conexionBaseDeDatos -> query($sql);

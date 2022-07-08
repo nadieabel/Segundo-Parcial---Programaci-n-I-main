@@ -7,7 +7,7 @@
             $u -> Nombre = $context['post']['usuario'];
             $u -> Password = $context['post']['password'];
             $u -> NombreCompleto = $context['post']['nombrecompleto'];
-            $u -> Guardar();
+            $u -> Guardar();    
         }
     }
 
