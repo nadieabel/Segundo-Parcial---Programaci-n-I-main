@@ -5,3 +5,9 @@ CREATE TABLE usuario(
     password varchar(255)
 );
 
+CREATE TABLE POST(
+    id int primary key auto_increment,
+    username varchar(50) unique,
+    fechayhora datetime,	
+    cuerpo varchar(300)
+);
