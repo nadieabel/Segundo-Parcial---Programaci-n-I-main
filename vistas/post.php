@@ -1,9 +1,14 @@
 <?php 
     require "../utils/autoload.php";
 
-     if(isset($_SESSION['autenticado']))
+   /*  if(isset($_SESSION['autenticado']))
         header("Location: /");
-        $userpost=. $_SESSION['nombreUsuario'];
+        $userpost=. $_SESSION['nombreUsuario']; no se como pasar este valor como usuario*
+        no se si es /*usuario=$userpost;*//
+        if(isset($_SESSION['autenticado'])){
+            echo "Bienvenido " . $_SESSION['nombreUsuario'];
+
+        
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,17 +19,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Fabrica de Chacinados - Bienvenido</h1>
+    <h1></h1>
     
     <form action="/login" method="post">
-        Inserte el texto <input type="text" name="usuario"> <br />
-        Fecha <input type=date('d-m-y h:i:s') name="FyH"> <br />
-        <input type="submit" value="Iniciar Sesión">
+    
+        Inserte el usuario <input type="text" name="usuario"> <br />  
+        Inserte el texto <input type="text" name="cuerpo"> <br />
+        Fecha <input type=date('d-m-y h:i:s') name="fyh"> <br />
+        <input type="submit" value="Postear">
+        
     </form>
 
     
     <?php if(isset($parametros['error']) && $parametros['error'] === true ) :?>
-        <div style="color: red;">Credenciales invalidas.</div>
+        <div style="color: red;">Error al crear el post.</div>
     <?php endif;?>
 
     
